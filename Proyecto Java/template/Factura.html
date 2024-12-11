@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Factura</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="./Css/factura.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="../js/modernizr.js"></script>
+    <script defer src="../js/fontawesome/all.min.js"></script>
+    <script src="https://kit.fontawesome.com/a1124a3708.js" crossorigin="anonymous"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../1200px-HP_logo_2012.svg.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../1200px-HP_logo_2012.svg.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="s-header__logo">
+            <a href="../index.html">
+                <img src="../1200px-HP_logo_2012.svg.png" alt="Homepage">
+            </a>
+        </div>
+
+        <div class="s-header__content">
+    
+            <nav class="s-header__nav-wrap">
+                <ul class="s-header__nav">
+                    <li><a href="../index.html#hero" title="Inicio">Inicio</a></li>
+                    <li><a href="../index.html#about" title="Acerca de">Acerca de nosotros</a></li>
+                    <li><a href="../index.html#services" title="productos">Nuestros productos</a></li>
+                    <li><a href="./Compras.html" title="Modelos">Compras</a></li>
+                    <li><a href="./Nomina.html" title="Modelos">Nomina</a></li>
+                    <li><a href="./Factura.html" title="Modelos">Pago de productos</a></li>
+                </ul>
+            </nav> <!-- end s-header__nav-wrap -->
+
+            <a href="./Registro Login.html" class="btn btn--primary btn--small">
+                Inicia sesion o Resitrate
+            </a>
+
+        </div> <!-- end header-content -->
+
+        <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+        <h1>Factura De Ventas Comida Rapida</h1>
+        <form action="">
+            <!-- Seccion cabecera de encabezado de factura -->
+            <table><caption>Factura de Ventas</caption>
+                <tr><th>Nombre</th><td><input type="text" size="20"></td><th>Tipo Documento</th><th><select name="" id="tp"><option>CC</option><option>CE</option><option>NIT</option></select></th><th>No. Documento</th><td><input type="text" size="25"></td></tr>
+                <tr><th>Direccion</th><td><input type="text" id="dir" size="20"></td><th>Telefono</th><td><input type="text" id="tel" size="20"></td><th>Empleado</th><td><input type="text" id="emp" size="25"></td></tr>
+    
+                <!-- Seccion cabecera de detalle de factura -->
+                <tr><th>Referencia</th>
+                    <th colspan="2">Descripcion</th><th>Cantidad</th><th>Valor Unitario</th><th>SubTotal</th>
+                </tr>
+                <tr>
+                    <th><select id="prod1" onchange="mostrar();">
+                        <option>Seleccionar:</option>
+                        <option value="2500000">Computador Portail</option>
+                        <option value="2000000">Computador de mesa</option>
+                        <option value="3500000">Impresora</option>
+                    </select></th>
+                    <th colspan="2"><input type="text" id="desc01" size="40"></th>
+                    <th><input type="number" id="cant01" size="10"></th>
+                    <th><input type="number" id="vau01" size="15" disabled></th>
+                    <th><input type="text" id="vat01" size="15" disabled></th>
+                </tr>
+                <tr>
+                    <th><select id="prod2" onchange="mostrar();">
+                        <option>Seleccionar:</option>
+                        <option value="2500000">Computador Portail</option>
+                        <option value="2000000">Computador de mesa</option>
+                        <option value="3500000">Impresora</option>
+                    </select></th>
+                    <th colspan="2"><input type="text" id="desc02" size="40"></th>
+                    <th><input type="number" id="cant02" size="10"></th>
+                    <th><input type="number" id="vau02" size="15" disabled></th>
+                    <th><input type="text" id="vat02" size="15" disabled></th>
+                </tr>
+                <tr>
+                    <th><select id="prod3" onchange="mostrar();">
+                        <option>Seleccionar:</option>
+                        <option value="2500000">Computador Portail</option>
+                        <option value="2000000">Computador de mesa</option>
+                        <option value="3500000">Impresora</option>
+                    </select></th>
+                    <th colspan="2"><input type="text" id="desc03" size="40"></th>
+                    <th><input type="number" id="cant03" size="10"></th>
+                    <th><input type="number" id="vau03" size="15" disabled></th>
+                    <th><input type="text" id="vat03" size="15" disabled></th>
+                </tr>
+                <tr><th colspan="6">ADICIONALES</th></tr>
+                <tr><th colspan="2" rowspan="2"><img src="https://gruposuministros.co/3163/cartucho-hp-667-negro-para-impresoras-hp-deskjet-plus-ink-advantage-6000-6400-printer-1200-all-in-one-2300-2700-4100.jpg" alt="">
+                <input type="checkbox" name="adic" id="checkbox1">Tinta de impresora $23.000</th>
+                <th colspan="2" rowspan="2"><img src="https://co-media.hptiendaenlinea.com/catalog/product/6/7/671R2AA-1_T1687887522.png" alt="">
+                <input type="checkbox" name="adic" id="checkbox2">Cargador $20.500</th></tr>
+                <th colspan="2" rowspan="2"><img src="https://co-media.hptiendaenlinea.com/catalog/product/cache/314dec89b3219941707ad62ccc90e585/4/3/43N04AA-1_T1679066203.png" alt="">
+                <input type="checkbox" name="adic" id="checkbox3">Mouse HP $10.700</th></tr>
+                <!-- Seccion liquidacion de factura -->
+                <tr></tr>
+                <tr><th colspan="4">TOTAL ADICIONALES </th>
+                <th colspan="2"><input type="number"  id="adic0" disabled></th></tr>
+                <tr>
+                <th colspan="2">Forma de Pago</th>
+                <th colspan="2"><input type="radio" name="fp" id="radio1">Efectivo <br>
+                    <input type="radio" name="fp" id="radio2">Nequi <br>
+                    <input type="radio" name="fp" id="radio3">TjCredito</th>
+                <th>SubTotal</th><td><input type="text" id="subt" size="25"></td></tr>
+                <tr>
+                    <th colspan="4" rowspan="3">Observaciones: Revise su pedido entregado y gracias por su compra</th>
+                    <th>IVA</th><td><input type="text" id="iva" size="25"></td>
+                </tr>
+                <tr><th>Descuento</th><td><input type="text" id="desc" size="25"></td></tr>
+                <tr><th>Neto</th><td><input type="text" id="neto" size="25"></td></tr>
+                <tr><th colspan="2"><input type="button" value="CALCULAR PAGO" onclick="mostrar();"></th>
+                <th colspan="2"><input type="reset" value="BORRAR"></th>
+            <th colspan="2"><input type="button" value="ENVIAR" onclick="enviar();"></th></tr>
+            </table>
+        </form>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <!-- footer
+    ================================================== -->
+    <footer class="s-footer">
+        <div class="row row-y-top">
+
+            <div class="column large-8 medium-12">
+                <div class="row">
+                    <div class="column large-7 tab-12 s-footer__block">
+                        <h4 class="h6">Ubicanos</h4>
+        
+                        <p>
+                            Cl. 77 #16A-36, Chapinero, Bogotá <br>
+                        <a href="tel:+573183480927">+573183480927</a>
+                        </p>
+                    </div>
+        
+                    <div class="column large-5 tab-12 s-footer__block">
+                        <h4 class="h6">Sigue nos en nuestras Redes</h4 class="h6">
+        
+                        <ul class="s-footer__list">
+                            <li><a href="#0">Facebook</a></li>
+                            <li><a href="#0">Twitter</a></li>
+                            <li><a href="#0">Instagram</a></li>
+                            <li><a href="#0">Dribbble</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column large-4 medium-12 s-footer__block--end">
+                <a href="#0" class="btn h-full-width">Escribenos</a>
+
+                <div class="ss-copyright">
+                    <span>Copyright @Jose Mauricio Chiriv</span> 
+                </div>
+            </div>
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">
+                    Subir
+                </a>
+            </div> <!-- end ss-go-top -->
+
+        </div>
+    </footer>
+    
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="./Js/factura.js"></script>
+
+</body>
+
+</html>
