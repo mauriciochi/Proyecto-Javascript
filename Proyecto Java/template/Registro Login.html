@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>inicio / Registro</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="./Css/Formulario Usuario.css"><!--  carrito.css -->
+
+
+    <!-- script
+    ================================================== -->
+    <script src="../js/modernizr.js"></script>
+    <script defer src="../js/fontawesome/all.min.js"></script>
+    <script src="https://kit.fontawesome.com/a1124a3708.js" crossorigin="anonymous"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="../image/png" sizes="32x32" href="../1200px-HP_logo_2012.svg.png">
+    <link rel="icon" type="../image/png" sizes="16x16" href="../1200px-HP_logo_2012.svg.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="s-header__logo">
+            <a href="../index.html">
+                <img src="../1200px-HP_logo_2012.svg.png" alt="Homepage">
+            </a>
+        </div>
+
+        <div class="s-header__content">
+    
+            <nav class="s-header__nav-wrap">
+                <ul class="s-header__nav">
+                    <li><a href="../index.html#hero" title="Inicio">Inicio</a></li>
+                    <li><a href="../index.html#about" title="Acerca de">Acerca de nosotros</a></li>
+                    <li><a href="../index.html#services" title="productos">Nuestros productos</a></li>
+                    <li><a href="./Compras.html" title="Modelos">Compras</a></li>
+                    <li><a href="./Nomina.html" title="Modelos">Nomina</a></li>
+                </ul>
+            </nav> <!-- end s-header__nav-wrap -->
+
+            <a href="./Registro Login.html" class="btn btn--primary btn--small">
+                Inicia sesion o Resitrate
+            </a>
+
+        </div> <!-- end header-content -->
+
+        <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+    
+    <br><br>
+    <div style="margin-top: 600px;" class="container" id="container">
+        <!-- Regístrese -->
+        <div class="form-container sign-up-container">
+            <form action="" method="">
+                <h2>Crear una cuenta</h2>
+                <!-- ***************** -->
+                <span style="font-size: 20px;font-weight:bold">Ingresa tus datos para registrarse</span>
+                <input type="text" placeholder="Usuario" name="usuario" required >
+                <input type="text" placeholder="Nombre" name="realname" required>
+                <input type="text" placeholder="Apellido" name="realapell" required>
+                <select name="tipo_doc">
+                    <option value="Tarjeta identidad">Tarjeta identidad</option>
+                    <option value="Cedula ciudadania">Cedula ciudadania</option>
+                </select>
+                <input type="text" placeholder="documento" name="no_documento" required>
+                <input type="password" placeholder="Password" name="pass" required>
+                <input type="password" placeholder="Repita Password" name="rpass" required>
+                <input type="submit" class="boost" name="submit" value="Registrar">
+            </form>
+        </div>
+        <!-- Iniciar sesión -->
+                <div class="form-container sign-in-container">
+                    <form action="" method="">
+                        <h2>Iniciar Sesión</h2>
+                        <div class="social-container">
+                            <a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
+                            <a href="https://www.youtube.com"><i class="fab fa-youtube-square"></i></a>
+                            <a href="https://www.twitter.com"><i class="fab fa-twitter-square"></i></a>
+                            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                            <a href="https://web.whatsapp.com"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                        <!-- ***************** -->
+                        <br>
+                        <span>Ingresa tu cuenta</span>
+                        <input type="text" placeholder="Usuario" name="usuario" required>
+                        <input type="password" placeholder="Password" name="pass" id="seña" required>
+                        <input type="checkbox" id="verpass" onchange="mostrarSeña()">Mostrar contraseña
+                        <a href="#">Olvidaste tu contraseña?</a>
+                        <input type="submit" class="boost" name="submit" id="boost" value="Aceptar">
+                    </form>
+                </div> 
+
+        <!-- SECCION DE CONTENEDORES OVERLAY DINAMICOS -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>BIENVENIDO DE NUEVO!</h1>
+                    <p>Inicie sesión con sus datos claves</p>
+                    <button class="ghost" id="signIn">Inicio Sesión</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Bienvenido</h1>
+                    <p>Ingrese sus datos personales</p>
+                    <button class="ghost" id="signUp">Registrate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- firma -->
+    <div class="footer">
+        <footer>
+            <p>Derechos Reservados Jose Maurico Chiriv Pulido &copy;2024 </p>
+        </footer>
+        
+    </div>
+
+    <!-- footer
+    ================================================== -->
+    <footer class="s-footer">
+        <div class="row row-y-top">
+
+            <div class="column large-8 medium-12">
+                <div class="row">
+                    <div class="column large-7 tab-12 s-footer__block">
+                        <h4 class="h6">Ubicanos</h4>
+        
+                        <p>
+                            Cl. 77 #16A-36, Chapinero, Bogotá <br>
+                        <a href="tel:+573183480927">+573183480927</a>
+                        </p>
+                    </div>
+        
+                    <div class="column large-5 tab-12 s-footer__block">
+                        <h4 class="h6">Sigue nos en nuestras Redes</h4 class="h6">
+        
+                        <ul class="s-footer__list">
+                            <li><a href="#0">Facebook</a></li>
+                            <li><a href="#0">Twitter</a></li>
+                            <li><a href="#0">Instagram</a></li>
+                            <li><a href="#0">Dribbble</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column large-4 medium-12 s-footer__block--end">
+                <a href="#0" class="btn h-full-width">Escribenos</a>
+
+                <div class="ss-copyright">
+                    <span>Copyright @Jose Mauricio Chiriv</span> 
+                </div>
+            </div>
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">
+                    Subir
+                </a>
+            </div> <!-- end ss-go-top -->
+
+        </div>
+    </footer>
+    
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/plugins.js"></script>
+    <script src="./Js/Formulario_ingreso_Registro.js"></script><!-- carrito.js -->
+
+</body>
+
+</html>
